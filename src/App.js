@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
 import Section from './components/Section';
-import Card from './components/Card';
+import Experience from './components/Experience';
+import Skills from './components/Skills';
 
 class App extends Component {
   render() {
@@ -10,7 +11,8 @@ class App extends Component {
       <div className="container">
           <NavBar />
           <Section />
-          <Card />
+          <Skills />
+          <Experience />
       </div>
     );
   }

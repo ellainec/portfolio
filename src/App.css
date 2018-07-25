@@ -14,6 +14,23 @@ img {
   outline: none;
 }
 
+.vertical-align {
+  display: inline-block;
+  vertical-align: middle;
+}
+h4 {
+  margin-bottom: 40px;
+}
+h5{
+  color: #43617D;
+}
+ul {
+  margin-bottom: 30px;
+}
+
+table {
+  margin-top: 30px;
+}
 @media (min-width: 576px) {
   .navbar-nav {
     width: 100%;
@@ -23,6 +40,11 @@ img {
   }
   img {
     margin-right: 20px;
+  }
+  #show-more-button{
+    color: #BAB3AA;
+    text-align: center;
+    margin-top: 20px;
   }
 }
 
