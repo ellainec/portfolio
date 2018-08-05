@@ -34,7 +34,7 @@ const Experience = () => {
             <a data-toggle="collapse" href="#moreExperience" role="button" aria-expanded="false" aria-controls="moreExperience">
             <h6 id="show-more-button">Show More</h6>
             </a>
-            <div class="collapse" id="moreExperience">
+            <div className="collapse" id="moreExperience">
               <h5>Global Governance Manager, Vendor and Contract</h5>
               <p>Appnovation Technologies, 2015</p>
               <ul>

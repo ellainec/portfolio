@@ -2,7 +2,7 @@ import React from 'react';
 
 const Skills = () => {
   return(
-    <table class="table">
+    <table className="table">
       <thead>
         <tr>
           <th scope="col">Skills</th>
