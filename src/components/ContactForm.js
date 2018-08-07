@@ -21,7 +21,7 @@ class ContactForm extends Component {
         console.log(this.state.message);
         axios({
             method: "POST",
-            url: "http://localhost:8080/send",
+            url: "https://desolate-citadel-94239.herokuapp.com/send",
             data: {
                 name: this.state.name,
                 email: this.state.email,
