@@ -10,10 +10,10 @@ const NavBar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
                 <div className="navbar-nav">
-                    <a className="nav-link nav-item text-secondary" href="#">Experience</a>
-                    <a className="nav-link nav-item text-secondary" href="#">Projects</a>
-                    <a className="nav-link nav-item float-right text-secondary" href="#">Education</a>
-                    <a className="nav-link nav-item float-right text-secondary" href="#">Contact</a>
+                    <a className="nav-link nav-item text-secondary" href="#Projects">Projects</a>
+                    <a className="nav-link nav-item text-secondary" href="#Experience">Experience</a>
+                    <a className="nav-link nav-item float-right text-secondary" href="#Education">Education</a>
+                    <a className="nav-link nav-item float-right text-secondary" href="#Contact">Contact</a>
                 </div>
             </div>
         </nav>

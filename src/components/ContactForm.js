@@ -41,12 +41,9 @@ class ContactForm extends Component {
         return (
             <div>
                 <hr />
-                <h4>Contact Me</h4>
-                <div className="logoDiv d-flex justify-content-between">
-                    <div>
-                        <img id="gmailLogo" src={GmailLogo} alt="Gmail Logo" />
-                        <span className="text-info small">contactellaine@gmail.com</span>
-                    </div>
+                <h4 id="Contact">Contact Me</h4>
+                <p className="text-info" id="email">contactellaine@gmail.com</p>
+                <div className="logoDiv d-flex flex-wrap justify-content-around">
                     <a href="https://github.com/ellainec"><img src={GithubLogo} alt="Github Logo"/></a>
                     <a href="https://www.linkedin.com/in/ellainec"><img src={LinkedInLogo} alt="LinkedIn Logo" /></a>
                 </div>
@@ -79,9 +76,7 @@ class ContactForm extends Component {
                             onChange={event => this.setState({message: event.target.value})}/>
                     </div>
                     <div className="text-primary"> {this.state.onSubmitResponse} </div>
-                    <div className="m-*-auto">
                     <button type="submit" className="btn btn-outline-dark btn-block">Submit</button>
-                    </div>
                 </form>
             </div>
         );

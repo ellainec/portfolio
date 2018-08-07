@@ -67,6 +67,15 @@ table {
 .btn {
   margin-bottom: 60px;
 }
+
+#SFUHeading{
+  margin-top: 30px;
+}
+
+#email {
+  text-align: center;
+}
+
 @media (min-width: 576px) {
   .navbar-nav {
     width: 100%;
@@ -85,7 +94,7 @@ table {
 }
 
 @media (max-width: 576px) {
-  .d-flex {
+  .columnMobile {
     flex-direction: column;
     align-items: center;
   }
