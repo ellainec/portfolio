@@ -18,7 +18,8 @@ app.post('/send', function(req, res) {
         auth: {
             user: creds.USER,
             pass: creds.PASS
-        }
+        },
+        logger: true
     });
     mailOpts = {
         from: req.body.name + '&lt;' + req.body.email + '&gt;',
@@ -26,14 +27,14 @@ app.post('/send', function(req, res) {
         subject: 'New message from contact form at ellaine.me',
         text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
     };
-    smtpTrans.sendMail(mailOpts, function (error, res)  {
-        if (error) {
-            res.send('contact-failure');
-        }
-        else {
-            res.send('contact-success');
-        }
-    });
+    smtpTrans.sendMail(mailOpts, function (err, success)  {
+            if (err) {
+                res.json('failed');
+            }
+            else {
+                res.json('success');
+            }
+        });
 });
 
 app.get('/', function(req, res){
