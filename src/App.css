@@ -59,6 +59,11 @@ table {
   margin: 0 auto;
 }
 
+.contactMessage{
+  margin: 30px;
+  text-align:center;
+}
+
 .logoDiv {
   max-width: 500px;
   margin: 40px auto;

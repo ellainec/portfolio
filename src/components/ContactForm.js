@@ -75,7 +75,7 @@ class ContactForm extends Component {
                             value={this.state.message}
                             onChange={event => this.setState({message: event.target.value})}/>
                     </div>
-                    <div className="text-primary"> {this.state.onSubmitResponse} </div>
+                    <div className="text-primary contactMessage"> {this.state.onSubmitResponse} </div>
                     <button type="submit" className="btn btn-outline-dark btn-block">Submit</button>
                 </form>
             </div>
