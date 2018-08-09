@@ -3,13 +3,11 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
 const creds = require('./config/config');
-const cors = require('cors');
 
 const app = express();
 app.use(express.static(path.join(__dirname, 'build')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(cors());
 
 app.post('/send', function(req, res) {
     let mailOpts, smtpTrans;
