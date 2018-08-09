@@ -52,6 +52,7 @@ class ContactForm extends Component {
                         <label>Name</label>
                         <input
                             type="text"
+                            required
                             className="form-control"
                             value={this.state.name}
                             onChange={event => this.setState({name: event.target.value})}
@@ -61,6 +62,7 @@ class ContactForm extends Component {
                         <label>Email address</label>
                         <input
                             type="email"
+                            required
                             className="form-control"
                             value={this.state.email}
                             onChange={event => this.setState({email: event.target.value})}
@@ -70,6 +72,7 @@ class ContactForm extends Component {
                         <label>Message</label>
                         <textarea
                             ref="message"
+                            required
                             className="form-control"
                             rows="5"
                             value={this.state.message}
