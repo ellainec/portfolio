@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const cors = require("cors");
 
+const password = process.env.PASS;
+
 const app = express();
 app.use(express.static(path.join(__dirname, 'build')));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -18,18 +20,19 @@ app.post('/send', function(req, res) {
         secure: true,
         auth: {
             user: 'contactellaine@gmail.com',
-            pass: process.env.emailpassword
+            pass: password
         },
         logger: true
     });
     mailOpts = {
         from: req.body.name + '&lt;' + req.body.email + '&gt;',
-        to: creds.USER,
+        to: 'contactellaine@gmail.com',
         subject: 'New message from contact form at ellaine.me',
         text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
     };
     smtpTrans.sendMail(mailOpts, function (err, success)  {
             if (err) {
+                console.log(err.message);
                 res.json('failed');
             }
             else {
