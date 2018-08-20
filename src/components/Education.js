@@ -23,7 +23,7 @@ const Education = () => {
             <ul>
               <li>Ethereum and Solidity: The Complete Developer's Guide by Stephen Grider - 100% completed</li>
               <li>The Web Developer Bootcamp by Colt Steele - 70% completed</li>
-              <li>The Complete React Native and Redux Course - 54% completed</li>
+              <li>The Complete React Native and Redux Course by Stephen Grider - 54% completed</li>
             </ul>
         </div>
     );
