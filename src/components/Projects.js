@@ -28,8 +28,8 @@ const Projects = () => {
                   url="https://github.com/BlockchainRoyale"
                   description="Machohacks 2018 was the first hackathon I've attended. Our idea (myself with 4 other team members)
                   was a battle royale meets chess game. The goal was to have the game run on a blockchain so all players have
-                  perfect information about and to eliminate cheating. I started on the solidity code, we picked Solidity because
-                  that was what I knew, but it became transparent pretty early on that the gas consumption would be unrealistic (
+                  perfect information and to eliminate cheating. We picked Solidity because it was what I knew and I started on the
+                  smart contract but it became transparent pretty early on that the gas consumption would be unrealistic (
                   the contract wasn't even finished and each move/transation was costing around $4 according to remix!). We came to the
                   conclusion that if this game was possible it would have to be on another blockchain with faster and lower cost transactions
                   so a more senior member created a prototype with Scala while I helped with game design and a bit on front end." />
