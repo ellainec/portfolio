@@ -21,7 +21,7 @@ class App extends Component {
                           Before I began my coding journey, I had graduated from Simon Fraser University with a Bachelor of Business
                           Administration. I spent around 4 years helping a IT services company source, negotiate and manage
                           their global vendors and contracts.</p>
-                          <p>Skills I'm currently improving on: Java, Javascript (ES6), React, Node.js, Solidity, HTML, CSS, Git </p></div>
+                          <p>Skills I'm currently improving on: Java, Javascript (ES6), React, Redux, Node.js, Solidity, HTML, CSS, Git </p></div>
                   </div>
               </div>
           </div>

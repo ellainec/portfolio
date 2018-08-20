@@ -6,7 +6,7 @@ class Experience extends Component {
     };
 
     toggleMessage = () => {
-        if(this.state.toggleMessage == 'Show More') {
+        if(this.state.toggleMessage === 'Show More') {
             this.setState({toggleMessage: 'Show Less'});
         }
     }

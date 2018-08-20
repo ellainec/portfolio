@@ -40,6 +40,12 @@ table {
 
 .card-title {
   margin-top: 10px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.projectHeader {
+  margin-bottom: 10px;
 }
 
 .card-subtitle {
@@ -73,7 +79,7 @@ table {
   margin-bottom: 60px;
 }
 
-#SFUHeading{
+.marginTop30{
   margin-top: 30px;
 }
 

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import GithubLogo from '../img/GitHub-Mark-32px.png';
 import LinkedInLogo from '../img/linkedIn.png';
-import GmailLogo from '../img/logo_gmail_32px.png';
 
 class ContactForm extends Component {
     state = {
