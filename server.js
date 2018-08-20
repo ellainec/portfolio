@@ -2,7 +2,6 @@ const nodemailer = require('nodemailer');
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
-const creds = require('./config/config');
 const cors = require("cors");
 
 const app = express();
@@ -18,8 +17,8 @@ app.post('/send', function(req, res) {
         port: 465,
         secure: true,
         auth: {
-            user: creds.USER,
-            pass: creds.PASS
+            user: contactellaine@gmail.com,
+            pass: process.env.emailpassword
         },
         logger: true
     });
