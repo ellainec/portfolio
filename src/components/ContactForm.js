@@ -17,7 +17,6 @@ class ContactForm extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state.message);
         axios({
             method: "POST",
             url: "https://desolate-citadel-94239.herokuapp.com/send",

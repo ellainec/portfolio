@@ -32,7 +32,6 @@ app.post('/send', function(req, res) {
     };
     smtpTrans.sendMail(mailOpts, function (err, success)  {
             if (err) {
-                console.log(err.message);
                 res.json('failed');
             }
             else {
