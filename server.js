@@ -17,7 +17,7 @@ app.post('/send', function(req, res) {
         port: 465,
         secure: true,
         auth: {
-            user: contactellaine@gmail.com,
+            user: 'contactellaine@gmail.com',
             pass: process.env.emailpassword
         },
         logger: true
