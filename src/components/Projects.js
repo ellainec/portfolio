@@ -3,6 +3,8 @@ import ProjectCard from './ProjectCard';
 import h2no from '../img/h2no.PNG';
 import crowdcoin from '../img/CrowdCoin3.PNG';
 import blockchain from '../img/blockchain_royale.png';
+import nucleoBoard from '../img/nucleo_kit.jpg';
+import kolakucoa from '../img/CSA.jpg';
 
 const Projects = () => {
 
@@ -11,6 +13,20 @@ const Projects = () => {
             <hr />
             <h4 id="Projects"> Projects </h4>
             <div className="d-flex flex-wrap justify-content-between columnMobile">
+                <ProjectCard pic={nucleoBoard} name="Telus-BCIT IoT Collaboration" techList="C, C++, Mbed OS, STM32 Nucleo board, Quectel BG96 modem, LTE-M, MQTT,
+                    Microsoft Azure, AWS"
+                    url="https://github.com/ellainec/azureIoTMbed/tree/psm"
+                    description="Telus partnered up with BCIT's Applied Research and Innovation to test their new NB-IoT Network (but due to a delays in 
+                    the network going live we used LTE-M instead). Telus IoT Starter kits were used to collect environmental data 
+                    and sent over LTE-M network to both Microsoft Azure and AWS for visualization and storage. Working alongside 
+                    3 other team members, I focused on battery optimization. This included getting familiar with Mbed OS and Quectel BG96 modem, and 
+                    writing AT Commands to utilize Power Saving Mode."/>
+                <ProjectCard pic={kolakucoa} name="Kolakucoa Website" techList="AWS S3, AWS API Gateway, AWS Lambda, AWS SES, React"
+                    url="kolakucoa.com"
+                    description="Kolakucoa is a cartoon I co-created as a hobby project with my husband who did all the animation. I made a simple website hosted with AWS S3,
+                    and Lambda, API Gateway and SES for the contact form"
+                />
+
                 <ProjectCard pic={h2no} name="h2NO.xyz" techList="Phaser.js, PHP, MySQL, HTML, CSS"
                     url="https://github.com/ellainec/h2no"
                     description="Myself and 4 other team members built this side scroller game to promote water conservation

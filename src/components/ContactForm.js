@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+//import axios from 'axios';
 import GithubLogo from '../img/GitHub-Mark-32px.png';
 import LinkedInLogo from '../img/linkedIn.png';
 
@@ -17,21 +17,21 @@ class ContactForm extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        axios({
-            method: "POST",
-            url: "https://desolate-citadel-94239.herokuapp.com/send",
-            data: {
-                name: this.state.name,
-                email: this.state.email,
-                message: this.state.message
-            }
-        }).then(response => {
-            if (response.data === 'success') {
-                this.resetForm();
-            } else if (response.data === 'failed') {
-                this.setState({onSubmitResponse: 'Unable to send message.'});
-            }
-        })
+        // axios({
+        //     method: "POST",
+        //     url: "https://desolate-citadel-94239.herokuapp.com/send",
+        //     data: {
+        //         name: this.state.name,
+        //         email: this.state.email,
+        //         message: this.state.message
+        //     }
+        // }).then(response => {
+        //     if (response.data === 'success') {
+        //         this.resetForm();
+        //     } else if (response.data === 'failed') {
+        //         this.setState({onSubmitResponse: 'Unable to send message.'});
+        //     }
+        // })
     };
 
 
