@@ -2,7 +2,6 @@ import React from 'react';
 
 const Position = (props) => {
     const {title, company, period, descriptionList} = props;
-    console.log(JSON.stringify(descriptionList));
     return (
         <React.Fragment>
             <h5>{title}</h5>

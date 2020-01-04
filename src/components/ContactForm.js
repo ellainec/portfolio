@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-//import axios from 'axios';
+import paperPlane from '../img/paper-plane.png';
+import sadFace from '../img/sad.png';
 import GithubLogo from '../img/GitHub-Mark-32px.png';
 import LinkedInLogo from '../img/linkedIn.png';
 
@@ -15,25 +16,33 @@ class ContactForm extends Component {
         this.setState({name: '', email:'', message: '', onSubmitResponse: 'Message sent'});
     };
 
-    handleSubmit = (e) => {
-        e.preventDefault();
-        // axios({
-        //     method: "POST",
-        //     url: "https://desolate-citadel-94239.herokuapp.com/send",
-        //     data: {
-        //         name: this.state.name,
-        //         email: this.state.email,
-        //         message: this.state.message
-        //     }
-        // }).then(response => {
-        //     if (response.data === 'success') {
-        //         this.resetForm();
-        //     } else if (response.data === 'failed') {
-        //         this.setState({onSubmitResponse: 'Unable to send message.'});
-        //     }
-        // })
-    };
 
+    sendEmail = () => {
+        const url = "https://sltmrsoftf.execute-api.us-west-2.amazonaws.com/cors-enabled/kolakucoa";
+        return fetch(url, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: this.state.name,
+                email: this.state.email,
+                message: this.state.message
+            })
+        });
+    }
+
+    handleSubmit = async () => {
+        await this.sendEmail()
+            .then((res) => {
+                if (res.status === 200) {
+                    //setSent(true);
+                }
+            })
+            .catch((err) => {  
+                console.log(JSON.stringify(err));        
+            });
+    };
 
     render() {
         return (
@@ -45,7 +54,7 @@ class ContactForm extends Component {
                     <a href="https://github.com/ellainec"><img src={GithubLogo} alt="Github Logo"/></a>
                     <a href="https://www.linkedin.com/in/ellainec"><img src={LinkedInLogo} alt="LinkedIn Logo" /></a>
                 </div>
-                <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+                <form id="contact-form" onSubmit={this.handleSubmit.bind(this)}>
                     <div className="form-group">
                         <label>Name</label>
                         <input
@@ -55,6 +64,7 @@ class ContactForm extends Component {
                             value={this.state.name}
                             onChange={event => this.setState({name: event.target.value})}
                         />
+                         { this.state.nameError && <span className="errorText">Name is missing</span>}
                     </div>
                     <div className="form-group">
                         <label>Email address</label>

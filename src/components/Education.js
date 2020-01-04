@@ -7,8 +7,8 @@ const Education = () => {
             <h4 id="Education">Education</h4>
 
             <h5>British Columbia Institute of Technology</h5>
-            <p>Diploma, Computer Systems Technology</p>
-            <p>January 2018 - April 2020 (expected)</p>
+            <p>Diploma, Computer Systems Technology with Data Communications Option</p>
+            <p>January 2018 - May 2020</p>
 
             <h5 className="marginTop30">Simon Fraser University</h5>
             <p>Bachelor of Business Administration (B.B.A), Management Information

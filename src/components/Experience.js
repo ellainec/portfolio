@@ -16,7 +16,7 @@ class Experience extends Component {
         return (
             <div className="container">
                 <hr/>
-                <h4 id="Experience">Experience</h4>
+                <h4 id="Work Experience">Experience</h4>
                 <Position title="Global Governance Manager, Vendor and Contract" 
                     company = "Appnovation Technologies" 
                     period= "September 2015 - January 2018"
@@ -82,7 +82,7 @@ class Experience extends Component {
                 </div>
                 <a data-toggle="collapse" href="#moreExperience" role="button" aria-expanded="false"
                    aria-controls="moreExperience" onClick={this.toggleMessage}>
-                    <h6 id="show-more-button">{this.state.toggleMessage}</h6>
+                    <h6 className="show-more-button">{this.state.toggleMessage}</h6>
                 </a>
             </div>
         )
