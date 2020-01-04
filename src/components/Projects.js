@@ -6,8 +6,6 @@ import blockchain from '../img/blockchain_royale.png';
 import nucleoBoard from '../img/nucleo_kit.jpg';
 import kolakucoa from '../img/CSA.jpg';
 import rentSmart from '../img/rentsmart.PNG';
-import paperPlane from '../img/paper-plane.png';
-import sadFace from '../img/sad.png';
 
 const Projects = () => {
     const [display, setDisplay] = useState(false);

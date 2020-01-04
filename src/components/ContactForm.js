@@ -18,6 +18,7 @@ class ContactForm extends Component {
 
 
     sendEmail = () => {
+        console.log("sending...");
         const url = "https://sltmrsoftf.execute-api.us-west-2.amazonaws.com/cors-enabled/kolakucoa";
         return fetch(url, {
             method: "POST",
@@ -32,15 +33,16 @@ class ContactForm extends Component {
         });
     }
 
-    handleSubmit = async () => {
-        await this.sendEmail()
+    handleSubmit = async (e) => {
+        e.preventDefault();
+        await this.sendEmail.bind(this)()
             .then((res) => {
                 if (res.status === 200) {
-                    //setSent(true);
+                    this.setState({onSubmitResponse: "Message sent, thanks!"});
                 }
             })
             .catch((err) => {  
-                console.log(JSON.stringify(err));        
+                this.setState({onSubmitResponse: "Sorry there was an error, please email me at chan.ellaine@gmail.com"});     
             });
     };
 
@@ -49,12 +51,12 @@ class ContactForm extends Component {
             <div>
                 <hr />
                 <h4 id="Contact">Contact Me</h4>
-                <p className="text-info" id="email">contactellaine@gmail.com</p>
                 <div className="logoDiv d-flex flex-wrap justify-content-around">
                     <a href="https://github.com/ellainec"><img src={GithubLogo} alt="Github Logo"/></a>
                     <a href="https://www.linkedin.com/in/ellainec"><img src={LinkedInLogo} alt="LinkedIn Logo" /></a>
+                    <span className="text-info" id="email">chan.ellaine@gmail.com</span>
                 </div>
-                <form id="contact-form" onSubmit={this.handleSubmit.bind(this)}>
+                <form id="contact-form">
                     <div className="form-group">
                         <label>Name</label>
                         <input
@@ -87,7 +89,7 @@ class ContactForm extends Component {
                             onChange={event => this.setState({message: event.target.value})}/>
                     </div>
                     <div className="text-primary contactMessage"> {this.state.onSubmitResponse} </div>
-                    <button type="submit" className="btn btn-outline-dark btn-block">Submit</button>
+                    <button className="btn btn-outline-dark btn-block" onClick= {this.handleSubmit.bind(this)}>Submit</button>
                 </form>
             </div>
         );

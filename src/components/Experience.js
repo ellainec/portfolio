@@ -17,6 +17,19 @@ class Experience extends Component {
             <div className="container">
                 <hr/>
                 <h4 id="Work Experience">Experience</h4>
+                <Position title="Software Engineer Co-op" 
+                    company = "Realtor.com" 
+                    period= "January 2019 - August 2019"
+                    descriptionList = {[
+                        `I worked on the team that was responsible for building Market Insight reports,which is a feature 
+                        provided by Realtor.com that enables agents to email real-time, local market information 
+                        (powered by MLS data) to their clients.`,
+                        `Built new features and fixed bugs on the back end Node.js service hosted on AWS`,
+                        `Created and updated components on the front end React project, first using redux and class components
+                         and then later on React hooks`,
+                        `Worked in an Agile environment, and acted as rotating Scrum Master every other sprint to lead and present in weekly meetings`,
+                        `Gained experience with adding new queries and mutations to GraphQL project, implemeted on Apollo and AWS AppSync`]}/>
+
                 <Position title="Global Governance Manager, Vendor and Contract" 
                     company = "Appnovation Technologies" 
                     period= "September 2015 - January 2018"
