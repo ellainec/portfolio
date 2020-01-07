@@ -3,30 +3,37 @@ import signalhub from 'signalhub';
 import webrtcswarm from 'webrtc-swarm';
 import VideoStream from './VideoStream';
 
-const WebRTC = () => {
+const Conference = (props) => {
     const [localStream, setLocalStream] = useState(null);
     const [otherStreams, setOtherStreams] = useState({});
 
-    const hub = signalhub('sdkf82n3299f832892fnejhf90f8334n', [
+    const hub = signalhub(`${props.meetingNumber}`, [
         'https://signalhub-jccqtwhdwc.now.sh']);
 
     const getStream = async () => {
         try {
             const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
-            setLocalStream(<VideoStream id="myVideo" stream={stream}/>);
+            setLocalStream(<VideoStream id="myVideo" stream={stream} name={props.name}/>);
             const swarm = webrtcswarm(hub, {stream:stream});
             swarm.on('connect', (peer, id) => {
                 if(!otherStreams[id]) {
+                    console.log("PEER: ", JSON.stringify(peer));
+                    console.log("ID: ", id);
                     setOtherStreams({
                         id: <VideoStream id={id} stream = {peer.stream}/>,
                         ...otherStreams 
                     });
-                    peer.send("Name Lola");
+                    peer.send(props.name);
                 }
                 peer.on('data', function(data) {
-                    data.forEach(char => {
-                        console.log(String.fromCharCode(char));
-                    })
+                    // console.log("FROM: ", JSON.stringify(peer));
+                    console.log("FROM ID: ", id);
+                    console.log("data: ", data.toString());
+                    setOtherStreams({
+                        id: <VideoStream id={id} stream = {peer.stream} name={data.toString()} />,
+                        ...otherStreams 
+                    });
+
                 })
             })
         } catch(err) {
@@ -50,4 +57,4 @@ const WebRTC = () => {
     );
 }
 
-export default WebRTC;
+export default Conference;

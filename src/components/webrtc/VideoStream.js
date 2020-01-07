@@ -26,7 +26,7 @@ const VideoStream = (props) => {
             setHeight(ref.style.height);
         }}
         >
-                    <div>
+        <div><label>{props.name}</label>
         <video height="100%" width="100%" id={props.id} autoPlay></video>
         <div><button onClick={()=>{stream.getVideoTracks()[0].enabled = false}}>disableVideo</button></div>
         <div><button onClick={()=>{console.log(stream.getTracks())}}>getTracks</button></div>
