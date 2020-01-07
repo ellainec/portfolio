@@ -28,7 +28,8 @@ class ContactForm extends Component {
             body: JSON.stringify({
                 name: this.state.name,
                 email: this.state.email,
-                message: this.state.message
+                message: this.state.message,
+                origin: "ellainechan.com"
             })
         });
     }
