@@ -8,7 +8,7 @@ It is currently hosted on AWS using S3, API Gateway, Lambda, SES.
 Served via AWS Cloudfront and SSL certificate is from Amazon Certificate manager.
 
 ## Work in progress
-Video conferencing with webrtc
+Video conferencing with webrtc.
 First attempts to use webrtc-swarm returns your own Mediastream instead of the other peers. 
 
 ## Run locally
